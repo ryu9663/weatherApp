@@ -2,7 +2,19 @@ import {React,useState} from 'react'
 import styled from "styled-components";
 
 const FixedComponent = styled.div`
-    
+    /* display : flex;
+    justify-content: center;
+    position: relative; */
+    margin-bottom: 1rem;
+
+`
+const TextBox = styled.input`
+    width : 130px;
+    height : 30px;
+    text-align: center;
+    border-radius: 10px;
+    background-color : rgba(255,255,255,0.5);
+    border : none;
 `
 
 
@@ -13,16 +25,19 @@ function SearchWeather({city,setCity}){
     }
     function onKeyPress (e){
         if(e.key==='Enter'){
+            
             setCity(e.target.value)
-            // console.log(e.target.value)
+            // 검색후 다시 빈칸만들기
+            setPlace('')
         }
     }
     return (
     <FixedComponent>
-        <input type = 'text' value = {place} 
+        <TextBox type = 'text' value = {place} 
             onChange = {(e)=>onChange(e)}
             onKeyPress = {onKeyPress}
-        ></input>
+            placeholder = '도시를 입력해주세요'
+        ></TextBox>
         
     </FixedComponent>
 
