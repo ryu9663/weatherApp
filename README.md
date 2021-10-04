@@ -1,7 +1,10 @@
 
 
 
-Uploading 화면 기록 2021-10-04 오후 10.42.20.mov…
+
+https://user-images.githubusercontent.com/66232436/135865756-017ec5af-c179-4019-b7fd-a0c10b5c32d6.mov
+
+
 
 
 
