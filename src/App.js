@@ -21,7 +21,7 @@ function App() {
   const [isLoading,setIsLoading] = useState(true)
   const [infoList,setInfoList] = useState([])
   
-  const APIKEY = '479b71bd8170440dd418a65c5c00da87'
+  const APIKEY = '본인의 API키 넣기'
 
   const getWeather = async () => {
     let url = ''
