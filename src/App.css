@@ -40,7 +40,7 @@ body{
 }
 /* !검색박스 */
 .searchBox {
-  
+  /* border : 1px gray solid;   */
   /* position: fixed; */
   /* top: 30px; */
 

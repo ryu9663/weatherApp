@@ -2,10 +2,17 @@ import {React,useState} from 'react'
 import styled from "styled-components";
 
 const FixedComponent = styled.div`
-    /* display : flex;
+    display : flex;
     justify-content: center;
-    position: relative; */
+    align-items: center;
     margin-bottom: 1rem;
+    /* position: fixed; */
+    top:0; 
+    z-index:2;
+    width : 200px;
+    /* height: 50px; */
+    /* background-color: rgba(255,255,255,0.5); */
+    
 
 `
 const TextBox = styled.input`

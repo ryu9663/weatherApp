@@ -3,6 +3,7 @@ import rain from '../img/rain.png'
 import cloudy from '../img/cloudy.png'
 import clear from '../img/clear.png'
 import mist from '../img/mist2.png'
+import haze from '../img/haze.png'
 
 const styles = {
     backgroundSize : 'cover',
@@ -33,12 +34,18 @@ function Image({weather}){
             // <img alt = '구름' src = {require('../img/cloudy.png')}/>
         )
     }
-    else if(weather === 'Mist'){
+    else if(weather === 'Mist' || weather === 'Haze'){
         return (
             <img alt = '안개' src = {mist} style = {styles}/>
             // <img alt = '구름' src = {require('../img/cloudy.png')}/>
         )
     }
+    // else if(weather === 'Haze'){
+    //     return (
+    //         <img alt = '연무' src = {haze} style = {styles}/>
+    //         // <img alt = '구름' src = {require('../img/cloudy.png')}/>
+    //     )
+    // }
 }
 
 export default Image;

@@ -4,6 +4,8 @@ import styled from "styled-components";
 const Column = styled.div`
     display: flex;
     flex-direction: column;
+    /* margin-top: 4rem; */
+    
     
     .normal{
         background-color: rgba(255,255,255,0.5) !important;

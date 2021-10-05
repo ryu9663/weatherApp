@@ -3,7 +3,7 @@ import WeatherOfCity from './components/WeatherOfCity.js';
 import Sidebar from './layout/Sidebar.js';
 import Image from './components/Image.js';
 import {React,useState,useEffect} from 'react'
-
+import APIKEY from './APIkey.js'
 import styled from "styled-components";
 import dummy from './dummy.js';
 
@@ -21,7 +21,7 @@ function App() {
   const [isLoading,setIsLoading] = useState(true)
   const [infoList,setInfoList] = useState([])
   
-  const APIKEY = '본인의 API키 넣기'
+  
 
   const getWeather = async () => {
     let url = ''
