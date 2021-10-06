@@ -7,6 +7,7 @@ import haze from '../img/haze.png'
 
 const styles = {
     backgroundSize : 'cover',
+    minWidth : '100%',
     //relative하면 안된다.
     position: "fixed",
     zIndex : '-9',
