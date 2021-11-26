@@ -3,7 +3,8 @@ import WeatherOfCity from './components/WeatherOfCity.js';
 import Sidebar from './layout/Sidebar.js';
 import Image from './components/Image.js';
 import {React,useState,useEffect} from 'react'
-import APIKEY from './APIkey.js'
+import dotenv from 'dotenv'
+
 import styled from "styled-components";
 import dummy from './dummy.js';
 
@@ -12,7 +13,7 @@ import LoadingIndicator from './components/LoadingIndicator.js';
 // const Image = styled.img`
 //   background-size : cover;
 // `
-
+require('dotenv').config();
 function App() {
   //사용자의 현재 위치를 받아서 currentCity에 할당할 수 있어야 한다.
   const [currentCity,setCurrentCity] = useState(dummy)
@@ -26,10 +27,10 @@ function App() {
   const getWeather = async () => {
     let url = ''
     if(city)  
-    url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKEY}`
+    url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_API_KEY}`
     else{
       // return 'Not found'
-      url = `https://api.openweathermap.org/data/2.5/weather?q=jecheon&appid=${APIKEY}`
+      url = `https://api.openweathermap.org/data/2.5/weather?q=jecheon&appid=${process.env.REACT_APP_API_KEY}`
     }
     
     

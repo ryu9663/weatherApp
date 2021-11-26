@@ -51,7 +51,7 @@ function Sidebar({city,infoList,currentCity,setCurrentCity}){
     if(infoList.length===0)return '도시를 선택해주세요'
     return (<Column >
         {infoList.map((info,idx)=>{
-            
+            console.log(info)
             return (
                 
                 <div style = {{margin : '2px'}} key = {idx} 
