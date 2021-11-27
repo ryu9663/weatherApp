@@ -66,11 +66,15 @@ body{
 /* !사이드바 */
 .sidebar{
   width : 200px;
-  /* background-color: rgb(182, 222, 238); */
+  background-color: rgba(255, 255, 255, 0.1);
   
   position: fixed;
   height : 100%;
-  overflow : auto;
+  overflow : scroll;
+}
+.sidebar::-webkit-scrollbar { 
+  display: none;
+  width: 0 !important;
 }
 .pink{
   margin-left : 200px;
@@ -80,4 +84,40 @@ body{
  
   /* position: fixed; */ 
   /* 이거 하면 sidebar를 가려서 sidebar클릭이 안됨 */
+}
+
+
+.loadingBox {
+  position: relative;
+  bottom:0;
+  
+  margin-top: 300px;
+  margin-left: 100px;
+  
+  
+}
+.loadingBox h1{
+  text-align: center;
+  
+}
+.loadingBox .circle {
+  margin-left: auto;margin-right: auto; 
+  width:40px; height:40px; 
+  border:10px solid #fff; 
+  border-top:10px solid rgb(176, 233, 168); 
+  border-radius:50em; 
+  transition:all .2s;
+  animation-name:spinCircle;
+  animation-duration:.8s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+
+@keyframes spinCircle {
+  from {
+      transform:translate(-50%, -50%) rotate(0);
+  }
+  to {
+      transform:translate(-50%, -50%) rotate(360deg);
+  }
 }

@@ -1,5 +1,16 @@
+import styled from "styled-components";
+
 function LoadingIndicator() {
-    return <img className="loading-indicator" alt="now loading..." src="loading.gif" style={{ margin: '1rem' }} />
+
+
+  return (
+    <div className="loadingBox">
+        
+        <div className="circle"></div>
+        <h1>현재 위치를 불러오고 있습니다. </h1>
+    </div>
+)
+
   }
   
   export default LoadingIndicator

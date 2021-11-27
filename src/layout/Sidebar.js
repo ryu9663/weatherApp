@@ -47,23 +47,23 @@ function Sidebar({city,infoList,currentCity,setCurrentCity}){
         console.log('currnet',currentCity.name)
         setCurrentCity(info)
     }
-    console.log(currentCity)
+    // console.log(currentCity)
     if(infoList.length===0)return '도시를 선택해주세요'
     return (<Column >
         {infoList.map((info,idx)=>{
-            console.log(info)
+            // console.log(info.data)
             return (
                 
                 <div style = {{margin : '2px'}} key = {idx} 
-                onClick = {()=>onClick(info)}
+                onClick = {()=>onClick(info.data)}
                 onMouseOver = {hoverHandler}
                 // onMouseDown = {hover}
-                className = {info.name === currentCity.name ? 'hover--over normal radiusAndPadding' : 'normal radiusAndPadding'}
+                className = {info.data.name === currentCity.name ? 'hover--over normal radiusAndPadding' : 'normal radiusAndPadding'}
                 >
                     
-                        <div>{info.name}</div>
-                        <div>{info.weather[0].main}</div>
-                        <div>{Math.round((info.main.temp-273)*100/100)}°C</div>
+                        <div>{info.data.name}</div>
+                        <div>{info.data.weather[0].main}</div>
+                        <div>{Math.round((info.data.main.temp-273)*100/100)}°C</div>
                         <div></div>
                         
                 </div>

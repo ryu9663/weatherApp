@@ -25,8 +25,8 @@ const TextBox = styled.input`
 `
 
 
-function SearchWeather({city,setCity}){
-    const [place,setPlace]= useState(city)
+function SearchWeather({city,setCity, infoList}){
+    const [place,setPlace]= useState('')
     function onChange (e){
         setPlace(e.target.value)
     }
@@ -44,7 +44,16 @@ function SearchWeather({city,setCity}){
             onChange = {(e)=>onChange(e)}
             onKeyPress = {onKeyPress}
             placeholder = '도시를 입력해주세요'
+            list = 'infoList'
         ></TextBox>
+        <datalist id = 'infoList'>
+            {infoList.map((info,idx)=>{
+                console.log(infoList)
+                return (
+                    <option key = {idx} value={info.data.name}/>
+                )
+            })}
+        </datalist>
         
     </FixedComponent>
 
