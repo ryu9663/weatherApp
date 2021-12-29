@@ -30,17 +30,19 @@ const WeatherBox = styled.div`
 
 //1638106205
 function WeatherOfCity({ currentCity }) {
-  // console.log('cu',Object.keys(currentCity))
-  // console.log('cu',currentCity)
-  //currentCity가 빈객체가 아니라면
-  const [time, setTime] = useState("");
+  const date = new Date();
+
+  const [time, setTime] = useState(
+    `${String(date.getHours()).padStart(2, "0")}:${String(date.getMinutes()).padStart(2, "0")}:${String(
+      date.getSeconds()
+    ).padStart(2, "0")}`
+  );
 
   function getClock() {
     const date = new Date();
     const hours = String(date.getHours()).padStart(2, "0");
     const minutes = String(date.getMinutes()).padStart(2, "0");
     const sec = String(date.getSeconds()).padStart(2, "0");
-
     setTime(`${hours}:${minutes}:${sec}`);
   }
   setInterval(getClock, 1000);
